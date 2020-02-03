@@ -35,7 +35,6 @@ class HomeViewModel @Inject constructor(private val balanceRepo: BalanceRepo) : 
                 }, { error ->
                     Log.e("Home", error.toString())
                     isLoading.value = false
-
                 })
         )
     }

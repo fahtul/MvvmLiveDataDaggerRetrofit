@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentFactory
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -68,7 +67,6 @@ class HomeFragment : Fragment() {
 
         homeViewModel.errorDisplay().observe(this, Observer { error->
             Log.e("Home", error.toString())
-
         })
 
         homeViewModel.getBalanceMutableLiveData(apiKey).observe(
